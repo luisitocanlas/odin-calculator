@@ -1,0 +1,43 @@
+:root {
+	--black-color: #000000;
+	--blue-color: #14213d;
+	--orange-color: #fca311;
+	--platinum-color: #e5e5e5;
+	--white-color: #ffffff;
+}
+
+body {
+	background-color: var(--blue-color);
+	color: var(--white-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+
+#calc-container,
+#display,
+#btn-container {
+	border: 2px var(--platinum-color) solid;
+}
+
+#calc-container {
+	width: 960px;
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+#display {
+	width: 800px;
+	height: 200px;
+}
+
+#btn-container {
+	width: 800px;
+	height: 700px;
+	display: flex;
+}
