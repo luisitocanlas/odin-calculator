@@ -10,6 +10,7 @@ output.textContent = '0';
 let num1 = 0;
 let num2 = 0;
 let op = '';
+let result = 0;
 
 // Event Listeners
 numBtns.forEach((button) => {
@@ -41,6 +42,10 @@ opBtns.forEach((button) => {
 			case 'multiply':
 			case 'subtract':
 			case 'add':
+				if (op && num2 !== '') {
+					num2 = +output.textContent;
+					output.textContent = operate(op, num1, num2);
+				}
 				num1 = +output.textContent;
 				op = btnId;
 				output.textContent = button.textContent;
