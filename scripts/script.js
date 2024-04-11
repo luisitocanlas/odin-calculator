@@ -6,11 +6,10 @@ const clear = document.querySelector('#clear');
 // Event Listeners
 numBtns.forEach((button) => {
 	button.addEventListener('click', () => {
-		if (output.textContent !== '0') {
-			output.textContent = output.textContent + button.value;
-		} else if (output.textContent === '0') {
-			output.textContent = button.value;
-		}
+		output.textContent =
+			output.textContent !== '0'
+				? output.textContent + button.value
+				: button.value;
 	});
 });
 
