@@ -1,9 +1,22 @@
 // Constants
-
-// querySelectors
-let output = document.querySelector('#output');
+const output = document.querySelector('#output');
+const numBtns = document.querySelectorAll('#num-container button');
+const clear = document.querySelector('#clear');
 
 // Event Listeners
+numBtns.forEach((button) => {
+	button.addEventListener('click', () => {
+		if (output.textContent !== '0') {
+			output.textContent = output.textContent + button.value;
+		} else if (output.textContent === '0') {
+			output.textContent = button.value;
+		}
+	});
+});
+
+clear.addEventListener('click', () => {
+	output.textContent = '0';
+});
 
 // Calculator function
 function operate(operation, num1, num2) {
