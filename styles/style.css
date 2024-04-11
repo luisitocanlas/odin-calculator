@@ -49,6 +49,7 @@ body {
 }
 
 button {
+	background-color: var(--platinum-color);
 	border-radius: 10px;
 	width: 120px;
 	height: 60px;
