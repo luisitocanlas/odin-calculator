@@ -42,13 +42,16 @@ opBtns.forEach((button) => {
 			case 'multiply':
 			case 'subtract':
 			case 'add':
-				if (op && num2 !== '') {
+				if (op !== '') {
 					num2 = +output.textContent;
-					output.textContent = operate(op, num1, num2);
+					result = operate(op, num1, num2);
+					output.textContent = result;
 				}
+
 				num1 = +output.textContent;
 				op = btnId;
 				output.textContent = button.textContent;
+
 				break;
 
 			case 'equals':
